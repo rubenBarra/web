@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .submenu {
+            display: none;
+        }
+
+        .submenu.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Barra de Navegación -->
+    <nav class="fixed w-full z-10 top-0 left-0 bg-transparent">
+        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+            <div class="relative flex items-center justify-between h-16">
+                <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+                    <div class="flex-shrink-0">
+                        <h1 class="text-white text-xl font-bold">Logo</h1>
+                    </div>
+                    <div class="hidden sm:block sm:ml-6">
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-white px-3 py-2 rounded-md text-sm font-medium">INICIO</a>
+                            <a href="#" class="text-white px-3 py-2 rounded-md text-sm font-medium" id="atractivos">ATRACTIVOS</a>
+                            <div class="submenu bg-gray-100 absolute mt-1 py-2 w-48 z-10" id="submenu">
+                                <a href="atractivos_turisticos.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-300">Atractivos Turísticos</a>
+                                <a href="gastronomia.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-300">Gastronomía</a>
+                                <a href="cultura_artesanias.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-300">Cultura y Artesanías</a>
+                                <a href="cultura_artesanias.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-300">Ventas</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Contenedor con Imagen de Fondo -->
+    <div class="relative bg-cover bg-center md:h-screen" style="background-image: url(2.jpg);"></div>
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="relative z-10 flex items-center justify-center md:items-start md:justify-start h-full">
+            <div class="text-center md:text-left md:ml-12 lg:ml-24 xl:ml-32">
+                <h1 class="text-white text-5xl font-bold">Trinidad</h1>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('atractivos').addEventListener('click', function() {
+            var submenu = document.getElementById('submenu');
+            submenu.classList.toggle('active');
+        });
+    </script>
+
+
+</body>
+
+</html>
+
